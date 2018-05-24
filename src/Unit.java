@@ -1,9 +1,10 @@
 import java.io.Serializable;
 
-public class Unit implements Serializable{
+public class Unit implements Serializable {
+	
+	private static final long serialVersionUID = -8899424092504638751L;
 	private int level, merges, grade;
 	private String assist, bane, boon, name, skillA, skillB, skillC, special, weapon;
-	
 	
 	public int getLevel() {
 		return level;

@@ -1,22 +1,26 @@
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import javax.swing.*;
 
 public class GUI implements ActionListener {
 	
-	private JButton addBtn;
+	private JButton newUnitBtn;
 	private JFrame frame;
 	private JPanel mainWindow;
+	
+	private FileManager fileManager;
 	
 	public GUI() {
 		frame = new JFrame("Fire Emblem: Heroes Collection");
 		mainWindow = new JPanel(new BorderLayout());
+		fileManager = new FileManager();
 		
-		addBtn = new JButton("Add New Unit");
-		addBtn.setBackground(Color.WHITE);
-		addBtn.addActionListener(this);
-		mainWindow.add(addBtn, BorderLayout.SOUTH);
+		newUnitBtn = new JButton("Add New Unit");
+		newUnitBtn.setBackground(Color.WHITE);
+		newUnitBtn.addActionListener(this);
+		mainWindow.add(newUnitBtn, BorderLayout.SOUTH);
 		
 		frame.setContentPane(mainWindow);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -26,7 +30,8 @@ public class GUI implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		if (e.getSource().equals(addBtn)) {
+		if (e.getSource().equals(newUnitBtn)) {
+			ArrayList<String> strList;
 			JButton addBtn = new JButton("Add Unit");
 			JFrame addFrame = new JFrame("Add New Unit");
 			JPanel addPnl = new JPanel();
@@ -34,8 +39,9 @@ public class GUI implements ActionListener {
 			// Setting up and adding components related to name. 
 			JLabel nameLbl = new JLabel("Name:", SwingConstants.CENTER);
 			nameLbl.setPreferredSize(new Dimension(100, 25));
-			String[] characters = {"Anna", "Morgan (F)", "Nino"};
-			JComboBox<String> charList = new JComboBox<>(characters);
+			strList = fileManager.readStringFile("C:\\Users\\zheng\\Documents\\workspace\\FEH Collection\\src\\Heroes");
+			String[] heroes = strList.toArray(new String[0]);
+			JComboBox<String> charList = new JComboBox<>(heroes);
 			charList.addActionListener(this);
 			charList.setBackground(Color.WHITE);
 			charList.setPreferredSize(new Dimension(200, 25));
@@ -109,7 +115,8 @@ public class GUI implements ActionListener {
 			// Setting up and adding components related to weapon. 
 			JLabel weaponLbl = new JLabel("Weapon:", SwingConstants.CENTER);
 			weaponLbl.setPreferredSize(new Dimension(100, 25));
-			String[] weapons = {"Falchion", "Gronnblade+"};
+			strList = fileManager.readStringFile("C:\\Users\\zheng\\Documents\\workspace\\FEH Collection\\src\\Weapons");
+			String[] weapons = strList.toArray(new String[0]);
 			JComboBox<String> weaponList = new JComboBox<>(weapons);
 			weaponList.addActionListener(this);
 			weaponList.setBackground(Color.WHITE);
@@ -121,7 +128,8 @@ public class GUI implements ActionListener {
 			// Setting up and adding components related to assist. 
 			JLabel assistLbl = new JLabel("Assist:", SwingConstants.CENTER);
 			assistLbl.setPreferredSize(new Dimension(100, 25));
-			String[] assists = {"Reposition", "Swap"};
+			strList = fileManager.readStringFile("C:\\Users\\zheng\\Documents\\workspace\\FEH Collection\\src\\Assists");
+			String[] assists = strList.toArray(new String[0]);
 			JComboBox<String> assistList = new JComboBox<>(assists);
 			assistList.addActionListener(this);
 			assistList.setBackground(Color.WHITE);
@@ -133,7 +141,8 @@ public class GUI implements ActionListener {
 			// Setting up and adding components related to special. 
 			JLabel specLbl = new JLabel("Special:", SwingConstants.CENTER);
 			specLbl.setPreferredSize(new Dimension(100, 25));
-			String[] specials = {"Aether", "Moonbow"};
+			strList = fileManager.readStringFile("C:\\Users\\zheng\\Documents\\workspace\\FEH Collection\\src\\Specials");
+			String[] specials = strList.toArray(new String[0]);
 			JComboBox<String> specList = new JComboBox<>(specials);
 			specList.addActionListener(this);
 			specList.setBackground(Color.WHITE);
@@ -145,7 +154,8 @@ public class GUI implements ActionListener {
 			// Setting up and adding components related to skill A. 
 			JLabel skillALbl = new JLabel("Skill A:", SwingConstants.CENTER);
 			skillALbl.setPreferredSize(new Dimension(100, 25));
-			String[] skillAs = {"Distant Counter", "Fury 3"};
+			strList = fileManager.readStringFile("C:\\Users\\zheng\\Documents\\workspace\\FEH Collection\\src\\A Skills");
+			String[] skillAs = strList.toArray(new String[0]);
 			JComboBox<String> skillAList = new JComboBox<>(skillAs);
 			skillAList.addActionListener(this);
 			skillAList.setBackground(Color.WHITE);
@@ -157,7 +167,8 @@ public class GUI implements ActionListener {
 			// Setting up and adding components related to skill B. 
 			JLabel skillBLbl = new JLabel("Skill B:", SwingConstants.CENTER);
 			skillBLbl.setPreferredSize(new Dimension(100, 25));
-			String[] skillBs = {"Desperation 3", "Swordbreaker 3"};
+			strList = fileManager.readStringFile("C:\\Users\\zheng\\Documents\\workspace\\FEH Collection\\src\\B Skills");
+			String[] skillBs = strList.toArray(new String[0]);
 			JComboBox<String> skillBList = new JComboBox<>(skillBs);
 			skillBList.addActionListener(this);
 			skillBList.setBackground(Color.WHITE);
@@ -169,7 +180,8 @@ public class GUI implements ActionListener {
 			// Setting up and adding components related to skill C. 
 			JLabel skillCLbl = new JLabel("Skill C:", SwingConstants.CENTER);
 			skillCLbl.setPreferredSize(new Dimension(100, 25));
-			String[] skillCs = {"Hone Spd 3", "Savage Blow 3"};
+			strList = fileManager.readStringFile("C:\\Users\\zheng\\Documents\\workspace\\FEH Collection\\src\\C Skills");
+			String[] skillCs = strList.toArray(new String[0]);
 			JComboBox<String> skillCList = new JComboBox<>(skillCs);
 			skillCList.addActionListener(this);
 			skillCList.setBackground(Color.WHITE);
