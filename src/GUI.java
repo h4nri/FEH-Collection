@@ -11,7 +11,7 @@ public class GUI implements ActionListener {
 	private JComboBox<Integer> gradeList, levelList, mergeList;
 	private JComboBox<String> assistList, baneList, boonList, charList, skillAList, skillBList, skillCList, specList, weaponList;
 	private JFrame frame;
-	private JPanel mainWindow, unitsPnl;
+	private JPanel mainWindow, formatPnl, unitsPnl;
 	private JScrollPane unitScroll;
 	
 	private ArrayList<Unit> editList, removeList, unitList;
@@ -22,7 +22,8 @@ public class GUI implements ActionListener {
 		frame = new JFrame("Fire Emblem: Heroes Collection");
 		mainWindow = new JPanel(new BorderLayout());
 		unitsPnl = new JPanel(new GridBagLayout());
-		unitScroll = new JScrollPane(unitsPnl);
+		formatPnl = new JPanel(new BorderLayout());
+		unitScroll = new JScrollPane(formatPnl);
 		
 		fileManager = new FileManager();
 	    c = new GridBagConstraints();
@@ -101,68 +102,62 @@ public class GUI implements ActionListener {
 		// Displaying the units in the "Units" file.
 		for (int i = 0; i <= unitList.size() - 1; i++) {
 			Unit currUnit = unitList.get(i);
+			c.gridy = i + 1;
+			
+			if (i != unitList.size() - 1) {
+				c.insets = new Insets(0, 0, 3, 0);
+			}
 			
 			JLabel unitName = new JLabel(currUnit.getName(), SwingConstants.CENTER);
 			c.gridx = 0;
-			c.gridy = i + 1;
 			unitsPnl.add(unitName, c);
 			
 			JLabel unitGrade = new JLabel(Integer.toString(currUnit.getGrade()), SwingConstants.CENTER);
 			c.gridx = 1;
-			c.gridy = i + 1;
 			unitsPnl.add(unitGrade, c);
 			
 			JLabel unitLevel = new JLabel(Integer.toString(currUnit.getLevel()), SwingConstants.CENTER);
 			c.gridx = 2;
-			c.gridy = i + 1;
 			unitsPnl.add(unitLevel, c);
 			
 			JLabel unitMerges = new JLabel(Integer.toString(currUnit.getMerges()), SwingConstants.CENTER);
 			c.gridx = 3;
-			c.gridy = i + 1;
 			unitsPnl.add(unitMerges, c);
 			
 			JLabel unitBoon = new JLabel(currUnit.getBoon(), SwingConstants.CENTER);
 			c.gridx = 4;
-			c.gridy = i + 1;
 			unitsPnl.add(unitBoon, c);
 			
 			JLabel unitBane = new JLabel(currUnit.getBane(), SwingConstants.CENTER);
 			c.gridx = 5;
-			c.gridy = i + 1;
 			unitsPnl.add(unitBane, c);
 			
 			JLabel unitWeapon = new JLabel(currUnit.getWeapon(), SwingConstants.CENTER);
 			c.gridx = 6;
-			c.gridy = i + 1;
 			unitsPnl.add(unitWeapon, c);
 			
 			JLabel unitAssist = new JLabel(currUnit.getAssist(), SwingConstants.CENTER);
 			c.gridx = 7;
-			c.gridy = i + 1;
 			unitsPnl.add(unitAssist, c);
 			
 			JLabel unitSpecial = new JLabel(currUnit.getSpecial(), SwingConstants.CENTER);
 			c.gridx = 8;
-			c.gridy = i + 1;
 			unitsPnl.add(unitSpecial, c);
 			
 			JLabel unitSkillA = new JLabel(currUnit.getSkillA(), SwingConstants.CENTER);
 			c.gridx = 9;
-			c.gridy = i + 1;
 			unitsPnl.add(unitSkillA, c);
 			
 			JLabel unitSkillB = new JLabel(currUnit.getSkillB(), SwingConstants.CENTER);
 			c.gridx = 10;
-			c.gridy = i + 1;
 			unitsPnl.add(unitSkillB, c);
 			
 			JLabel unitSkillC = new JLabel(currUnit.getSkillC(), SwingConstants.CENTER);
 			c.gridx = 11;
-			c.gridy = i + 1;
 			unitsPnl.add(unitSkillC, c);		
 		}
-		
+
+		formatPnl.add(unitsPnl, BorderLayout.NORTH);		
 		mainWindow.add(unitScroll, BorderLayout.CENTER);
 		
 		// Setting up the "Add New Unit" button.
@@ -347,6 +342,7 @@ public class GUI implements ActionListener {
 			addPnl.add(addBtn);
 			
 			addFrame.setContentPane(addPnl);
+			addFrame.setLocation(450, 220);
 			addFrame.setResizable(false);
 			addFrame.setSize(350, 435);
 			addFrame.setVisible(true);
@@ -366,7 +362,7 @@ public class GUI implements ActionListener {
 			unit.setSkillB(skillBList.getSelectedItem().toString());
 			unit.setSkillC(skillCList.getSelectedItem().toString());
 			
-			// Add the new unit to "unitList" and serialize the updated arraylist.			
+			// Add the new unit to "unitList" and serialize the updated ArrayList.			
 			try {
 				unitList.add(unit);
 				fileManager.serialize(unitList, "C:\\Users\\zheng\\Documents\\workspace\\FEH Collection\\src\\Units");
@@ -380,6 +376,59 @@ public class GUI implements ActionListener {
 				    "Error",
 				    JOptionPane.ERROR_MESSAGE);
 			}
+			
+			// Adding the new unit to "unitsPnl". 
+			c.gridy = unitList.size();
+			
+			JLabel unitName = new JLabel(unit.getName(), SwingConstants.CENTER);
+			c.gridx = 0;
+			unitsPnl.add(unitName, c);
+			
+			JLabel unitGrade = new JLabel(Integer.toString(unit.getGrade()), SwingConstants.CENTER);
+			c.gridx = 1;
+			unitsPnl.add(unitGrade, c);
+			
+			JLabel unitLevel = new JLabel(Integer.toString(unit.getLevel()), SwingConstants.CENTER);
+			c.gridx = 2;
+			unitsPnl.add(unitLevel, c);
+			
+			JLabel unitMerges = new JLabel(Integer.toString(unit.getMerges()), SwingConstants.CENTER);
+			c.gridx = 3;
+			unitsPnl.add(unitMerges, c);
+			
+			JLabel unitBoon = new JLabel(unit.getBoon(), SwingConstants.CENTER);
+			c.gridx = 4;
+			unitsPnl.add(unitBoon, c);
+			
+			JLabel unitBane = new JLabel(unit.getBane(), SwingConstants.CENTER);
+			c.gridx = 5;
+			unitsPnl.add(unitBane, c);
+			
+			JLabel unitWeapon = new JLabel(unit.getWeapon(), SwingConstants.CENTER);
+			c.gridx = 6;
+			unitsPnl.add(unitWeapon, c);
+			
+			JLabel unitAssist = new JLabel(unit.getAssist(), SwingConstants.CENTER);
+			c.gridx = 7;
+			unitsPnl.add(unitAssist, c);
+			
+			JLabel unitSpecial = new JLabel(unit.getSpecial(), SwingConstants.CENTER);
+			c.gridx = 8;
+			unitsPnl.add(unitSpecial, c);
+			
+			JLabel unitSkillA = new JLabel(unit.getSkillA(), SwingConstants.CENTER);
+			c.gridx = 9;
+			unitsPnl.add(unitSkillA, c);
+			
+			JLabel unitSkillB = new JLabel(unit.getSkillB(), SwingConstants.CENTER);
+			c.gridx = 10;
+			unitsPnl.add(unitSkillB, c);
+			
+			JLabel unitSkillC = new JLabel(unit.getSkillC(), SwingConstants.CENTER);
+			c.gridx = 11;
+			unitsPnl.add(unitSkillC, c);
+			
+			mainWindow.updateUI();
 		}
 	}
 }
