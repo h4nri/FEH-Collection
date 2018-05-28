@@ -54,6 +54,22 @@ public class Unit implements Serializable {
 		return weapon;
 	}
 	
+	public String getUnit() {
+		String s = "Name: " + this.getName() +
+				"\nGrade: " + this.getGrade() +
+				"\nLevel: " + this.getLevel() +
+				"\nMerges: " + this.getMerges() +
+				"\nBoon: " + this.getBoon() +
+				"\nBane: " + this.getBane() +
+				"\nWeapon: " + this.getWeapon() +
+				"\nAssist: " + this.getAssist() +
+				"\nSpecial: " + this.getSpecial() +
+				"\nSkill A: " + this.getSkillA() +
+				"\nSkill B: " + this.getSkillB() +
+				"\nSkill C: " + this.getSkillC();
+		return s;
+	}
+	
 	public void setLevel(int level) {
 		this.level = level;
 	}
