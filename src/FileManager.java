@@ -10,6 +10,7 @@ import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
 public class FileManager {	
+	// Deserializes and returns the object within a file. 
 	public Object deserialize(String fileName) throws IOException, ClassNotFoundException {
 		FileInputStream fis = new FileInputStream(fileName);
 		BufferedInputStream bis = new BufferedInputStream(fis);
@@ -19,6 +20,7 @@ public class FileManager {
 		return obj;
 	}
 	
+	// Serializes an object into a file.
 	public void serialize(Object obj, String fileName) throws IOException {
         FileOutputStream fos = new FileOutputStream(fileName);
         BufferedOutputStream bos = new BufferedOutputStream(fos);
@@ -27,6 +29,7 @@ public class FileManager {
         oos.close();
     }
 	
+	// Reads a file of Strings into an ArrayList<String> and returns it.
 	public ArrayList<String> readStringFile(String fileName) {
 		ArrayList<String> str = new ArrayList<>();
 		String line;

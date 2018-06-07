@@ -4,7 +4,7 @@ public class Unit implements Serializable {
 	
 	private static final long serialVersionUID = -8899424092504638751L;
 	private int level, merges, grade;
-	private String assist, bane, boon, name, skillA, skillB, skillC, special, weapon;
+	private String assist, bane, boon, hero, skillA, skillB, skillC, special, weapon;
 	
 	public int getLevel() {
 		return level;
@@ -30,8 +30,8 @@ public class Unit implements Serializable {
 		return boon;
 	}
 	
-	public String getName() {
-		return name;
+	public String getHero() {
+		return hero;
 	}
 	
 	public String getSkillA() {
@@ -52,22 +52,6 @@ public class Unit implements Serializable {
 	
 	public String getWeapon() {
 		return weapon;
-	}
-	
-	public String getUnit() {
-		String s = "Name: " + this.getName() +
-				"\nGrade: " + this.getGrade() +
-				"\nLevel: " + this.getLevel() +
-				"\nMerges: " + this.getMerges() +
-				"\nBoon: " + this.getBoon() +
-				"\nBane: " + this.getBane() +
-				"\nWeapon: " + this.getWeapon() +
-				"\nAssist: " + this.getAssist() +
-				"\nSpecial: " + this.getSpecial() +
-				"\nSkill A: " + this.getSkillA() +
-				"\nSkill B: " + this.getSkillB() +
-				"\nSkill C: " + this.getSkillC();
-		return s;
 	}
 	
 	public void setLevel(int level) {
@@ -94,8 +78,8 @@ public class Unit implements Serializable {
 		this.boon = boon;
 	}
 	
-	public void setName(String name) {
-		this.name = name;
+	public void setHero(String hero) {
+		this.hero = hero;
 	}
 	
 	public void setSkillA(String skillA) {
