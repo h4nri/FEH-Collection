@@ -90,7 +90,7 @@ public class GUI implements ActionListener {
 	    
 		// Retrieving units from the "Units" file.
 		try {
-			unitsArrayList = (ArrayList<Unit>) fileManager.deserialize("C:\\Users\\zheng\\Documents\\workspace\\FEH Collection\\src\\Units");
+			unitsArrayList = (ArrayList<Unit>) fileManager.deserialize("Units");
 		} catch (Exception e1) {
 			unitsArrayList = new ArrayList<>();
 		}
@@ -112,7 +112,7 @@ public class GUI implements ActionListener {
 		ArrayList<String> strArrayList;
 		
 		// Setting up the JComboBoxes for adding and editing purposes.
-		strArrayList = fileManager.readStringFile("C:\\Users\\zheng\\Documents\\workspace\\FEH Collection\\src\\Heroes");
+		strArrayList = fileManager.readStringFile("Heroes");
 		String[] heroes = strArrayList.toArray(new String[0]);
 		heroesComboBox = new JComboBox<>(heroes);
 		heroesComboBox.setBackground(Color.WHITE);
@@ -152,42 +152,42 @@ public class GUI implements ActionListener {
 		banesComboBox.setPreferredSize(new Dimension(200, 25));
 		((JLabel) banesComboBox.getRenderer()).setHorizontalAlignment(SwingConstants.CENTER);
 		
-		strArrayList = fileManager.readStringFile("C:\\Users\\zheng\\Documents\\workspace\\FEH Collection\\src\\Weapons");
+		strArrayList = fileManager.readStringFile("Weapons");
 		String[] weapons = strArrayList.toArray(new String[0]);
 		weaponsComboBox = new JComboBox<>(weapons);
 		weaponsComboBox.setBackground(Color.WHITE);
 		weaponsComboBox.setPreferredSize(new Dimension(200, 25));
 		((JLabel) weaponsComboBox.getRenderer()).setHorizontalAlignment(SwingConstants.CENTER);
 		
-		strArrayList = fileManager.readStringFile("C:\\Users\\zheng\\Documents\\workspace\\FEH Collection\\src\\Assists");
+		strArrayList = fileManager.readStringFile("Assists");
 		String[] assists = strArrayList.toArray(new String[0]);
 		assistsComboBox = new JComboBox<>(assists);
 		assistsComboBox.setBackground(Color.WHITE);
 		assistsComboBox.setPreferredSize(new Dimension(200, 25));
 		((JLabel) assistsComboBox.getRenderer()).setHorizontalAlignment(SwingConstants.CENTER);
 		
-		strArrayList = fileManager.readStringFile("C:\\Users\\zheng\\Documents\\workspace\\FEH Collection\\src\\Specials");
+		strArrayList = fileManager.readStringFile("Specials");
 		String[] specials = strArrayList.toArray(new String[0]);
 		specialsComboBox = new JComboBox<>(specials);
 		specialsComboBox.setBackground(Color.WHITE);
 		specialsComboBox.setPreferredSize(new Dimension(200, 25));
 		((JLabel) specialsComboBox.getRenderer()).setHorizontalAlignment(SwingConstants.CENTER);
 		
-		strArrayList = fileManager.readStringFile("C:\\Users\\zheng\\Documents\\workspace\\FEH Collection\\src\\A Skills");
+		strArrayList = fileManager.readStringFile("A Skills");
 		String[] skillAs = strArrayList.toArray(new String[0]);
 		skillAComboBox = new JComboBox<>(skillAs);
 		skillAComboBox.setBackground(Color.WHITE);
 		skillAComboBox.setPreferredSize(new Dimension(200, 25));
 		((JLabel) skillAComboBox.getRenderer()).setHorizontalAlignment(SwingConstants.CENTER);
 		
-		strArrayList = fileManager.readStringFile("C:\\Users\\zheng\\Documents\\workspace\\FEH Collection\\src\\B Skills");
+		strArrayList = fileManager.readStringFile("B Skills");
 		String[] skillBs = strArrayList.toArray(new String[0]);
 		skillBComboBox = new JComboBox<>(skillBs);
 		skillBComboBox.setBackground(Color.WHITE);
 		skillBComboBox.setPreferredSize(new Dimension(200, 25));
 		((JLabel) skillBComboBox.getRenderer()).setHorizontalAlignment(SwingConstants.CENTER);
 		
-		strArrayList = fileManager.readStringFile("C:\\Users\\zheng\\Documents\\workspace\\FEH Collection\\src\\C Skills");
+		strArrayList = fileManager.readStringFile("C Skills");
 		String[] skillCs = strArrayList.toArray(new String[0]);
 		skillCComboBox = new JComboBox<>(skillCs);
 		skillCComboBox.setBackground(Color.WHITE);
@@ -323,7 +323,7 @@ public class GUI implements ActionListener {
 			// Add the new unit to "unitsArrayList" and serialize the updated ArrayList.			
 			try {
 				unitsArrayList.add(unit);
-				fileManager.serialize(unitsArrayList, "C:\\Users\\zheng\\Documents\\workspace\\FEH Collection\\src\\Units");
+				fileManager.serialize(unitsArrayList, "Units");
 				JOptionPane.showMessageDialog(mainFrame, 
 						"Unit was successfully added.",
 						"Success",
@@ -607,7 +607,7 @@ public class GUI implements ActionListener {
 			
 			// Serialize the updated "unitsArrayList".			
 			try {
-				fileManager.serialize(unitsArrayList, "C:\\Users\\zheng\\Documents\\workspace\\FEH Collection\\src\\Units");
+				fileManager.serialize(unitsArrayList, "Units");
 				JOptionPane.showMessageDialog(mainFrame, 
 						"Unit was successfully editted.",
 						"Success",
@@ -654,7 +654,7 @@ public class GUI implements ActionListener {
 			
 			// Serializing the updated "unitsArrayList".
 			try {
-				fileManager.serialize(unitsArrayList, "C:\\Users\\zheng\\Documents\\workspace\\FEH Collection\\src\\Units");
+				fileManager.serialize(unitsArrayList, "Units");
 				JOptionPane.showMessageDialog(mainFrame, 
 						"Unit was successfully removed.",
 						"Success",
