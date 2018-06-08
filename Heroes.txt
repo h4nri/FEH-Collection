@@ -1,3 +1,4 @@
+
 Abel
 Alfonse
 Alm
@@ -107,12 +108,14 @@ Kagero
 Kana (F)
 Kana (M)
 Karel
+Karla
 Katarina
 Kaze
 Klein
 L'Arachel
 Lachesis
 Laslow
+Legault
 Legendary Ephraim
 Legendary Ike
 Legendary Lyn
@@ -163,6 +166,7 @@ New Year Takumi
 Niles
 Ninian
 Nino
+Nino (SF)
 Nowi
 Oboro
 Odin

@@ -112,7 +112,7 @@ public class GUI implements ActionListener {
 		ArrayList<String> strArrayList;
 		
 		// Setting up the JComboBoxes for adding and editing purposes.
-		strArrayList = fileManager.readStringFile("Heroes");
+		strArrayList = fileManager.readStringFile("Heroes.txt");
 		String[] heroes = strArrayList.toArray(new String[0]);
 		heroesComboBox = new JComboBox<>(heroes);
 		heroesComboBox.setBackground(Color.WHITE);
@@ -140,54 +140,54 @@ public class GUI implements ActionListener {
 		mergesComboBox.setPreferredSize(new Dimension(200, 25));
 		((JLabel) mergesComboBox.getRenderer()).setHorizontalAlignment(SwingConstants.CENTER);
 		
-		String[] boons = {"Neutral", "Hp", "Atk", "Spd", "Def", "Res"};
+		String[] boons = {"", "Neutral", "Hp", "Atk", "Spd", "Def", "Res"};
 		boonsComboBox = new JComboBox<>(boons);
 		boonsComboBox.setBackground(Color.WHITE);
 		boonsComboBox.setPreferredSize(new Dimension(200, 25));
 		((JLabel) boonsComboBox.getRenderer()).setHorizontalAlignment(SwingConstants.CENTER);
 		
-		String[] banes = {"Neutral", "Hp", "Atk", "Spd", "Def", "Res"};
+		String[] banes = {"", "Neutral", "Hp", "Atk", "Spd", "Def", "Res"};
 		banesComboBox = new JComboBox<>(banes);
 		banesComboBox.setBackground(Color.WHITE);
 		banesComboBox.setPreferredSize(new Dimension(200, 25));
 		((JLabel) banesComboBox.getRenderer()).setHorizontalAlignment(SwingConstants.CENTER);
 		
-		strArrayList = fileManager.readStringFile("Weapons");
+		strArrayList = fileManager.readStringFile("Weapons.txt");
 		String[] weapons = strArrayList.toArray(new String[0]);
 		weaponsComboBox = new JComboBox<>(weapons);
 		weaponsComboBox.setBackground(Color.WHITE);
 		weaponsComboBox.setPreferredSize(new Dimension(200, 25));
 		((JLabel) weaponsComboBox.getRenderer()).setHorizontalAlignment(SwingConstants.CENTER);
 		
-		strArrayList = fileManager.readStringFile("Assists");
+		strArrayList = fileManager.readStringFile("Assists.txt");
 		String[] assists = strArrayList.toArray(new String[0]);
 		assistsComboBox = new JComboBox<>(assists);
 		assistsComboBox.setBackground(Color.WHITE);
 		assistsComboBox.setPreferredSize(new Dimension(200, 25));
 		((JLabel) assistsComboBox.getRenderer()).setHorizontalAlignment(SwingConstants.CENTER);
 		
-		strArrayList = fileManager.readStringFile("Specials");
+		strArrayList = fileManager.readStringFile("Specials.txt");
 		String[] specials = strArrayList.toArray(new String[0]);
 		specialsComboBox = new JComboBox<>(specials);
 		specialsComboBox.setBackground(Color.WHITE);
 		specialsComboBox.setPreferredSize(new Dimension(200, 25));
 		((JLabel) specialsComboBox.getRenderer()).setHorizontalAlignment(SwingConstants.CENTER);
 		
-		strArrayList = fileManager.readStringFile("A Skills");
+		strArrayList = fileManager.readStringFile("A Skills.txt");
 		String[] skillAs = strArrayList.toArray(new String[0]);
 		skillAComboBox = new JComboBox<>(skillAs);
 		skillAComboBox.setBackground(Color.WHITE);
 		skillAComboBox.setPreferredSize(new Dimension(200, 25));
 		((JLabel) skillAComboBox.getRenderer()).setHorizontalAlignment(SwingConstants.CENTER);
 		
-		strArrayList = fileManager.readStringFile("B Skills");
+		strArrayList = fileManager.readStringFile("B Skills.txt");
 		String[] skillBs = strArrayList.toArray(new String[0]);
 		skillBComboBox = new JComboBox<>(skillBs);
 		skillBComboBox.setBackground(Color.WHITE);
 		skillBComboBox.setPreferredSize(new Dimension(200, 25));
 		((JLabel) skillBComboBox.getRenderer()).setHorizontalAlignment(SwingConstants.CENTER);
 		
-		strArrayList = fileManager.readStringFile("C Skills");
+		strArrayList = fileManager.readStringFile("C Skills.txt");
 		String[] skillCs = strArrayList.toArray(new String[0]);
 		skillCComboBox = new JComboBox<>(skillCs);
 		skillCComboBox.setBackground(Color.WHITE);

@@ -1,3 +1,4 @@
+
 Armored Blow 1
 Armored Blow 2
 Armored Blow 3
@@ -121,8 +122,8 @@ Spd/Def Bond 3
 Spd/Res Bond 1
 Spd/Res Bond 2
 Spd/Res Bond 3
-Spped +1
-Spped +2
+Speed +1
+Speed +2
 Speed +3
 Steady Blow 1
 Steady Blow 2

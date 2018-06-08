@@ -1,3 +1,4 @@
+
 Absorb
 Absorb+
 Alondite
@@ -292,6 +293,7 @@ Giant Spoon+ (+Atk)
 Giant Spoon+ (+Def)
 Giant Spoon+ (+Res)
 Giant Spoon+ (+Spd)
+Giga Excalibur
 Gleipnir
 Gradivus
 Gratia
@@ -716,6 +718,12 @@ Tannenboom!+ (+Def)
 Tannenboom!+ (+Res)
 Tannenboom!+ (+Spd)
 Thani
+The Cleaner
+The Cleaner+
+The Cleaner+ (+Atk)
+The Cleaner+ (+Spd)
+The Cleaner+ (+Def)
+The Cleaner+ (+Res)
 Thoron
 Thoron+
 Thoron+ (+Atk)
@@ -734,6 +742,7 @@ Tyrfing
 Urvan
 Uror
 Valflame
+Vassal's Blade
 Vidofnir
 Wargod's Tome
 Warrior Princess

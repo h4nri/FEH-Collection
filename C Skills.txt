@@ -1,3 +1,4 @@
+
 Armor March 1
 Armor March 2
 Armor March 3
@@ -51,6 +52,9 @@ Drive Res 1
 Drive Res 2
 Drive Spd 1
 Drive Spd 2
+Even Spd Wave 1
+Even Spd Wave 2
+Even Spd Wave 3
 Flier Guidance 1
 Flier Guidance 2
 Flier Guidance 3
