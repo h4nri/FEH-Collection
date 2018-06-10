@@ -19,6 +19,11 @@ Assassin's Bow+
 Assault
 Audhulma
 Aura
+Aura (+Atk)
+Aura (+Def)
+Aura (+Eff)
+Aura (+Res)
+Aura (+Spd)
 Ayra's Blade
 Barb Shuriken
 Barb Shuriken+
@@ -98,6 +103,7 @@ Brave Lance
 Brave Lance+
 Brave Sword
 Brave Sword+
+Breath of Fog
 Bright Naginata
 Brynhildr
 Brynhildr (+Atk)
@@ -220,6 +226,11 @@ Elwind
 Emerald Axe
 Emerald Axe+
 Excalibur
+Excalibur (+Atk)
+Excalibur (+Def)
+Excalibur (+Eff)
+Excalibur (+Res)
+Excalibur (+Spd)
 Expiration
 Falchion
 Falchion (+Atk)
