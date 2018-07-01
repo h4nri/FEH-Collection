@@ -37,6 +37,12 @@ Basilikos (+Def)
 Basilikos (+Eff)
 Basilikos (+Res)
 Basilikos (+Spd)
+Beach Banner
+Beach Banner+
+Beach Banner+ (+Atk)
+Beach Banner+ (+Def)
+Beach Banner+ (+Res)
+Beach Banner+ (+Spd)
 Beloved Zofia
 Berkut's Lance
 Berkut's Lance+
@@ -149,6 +155,12 @@ Clarisse's Bow+ (+Atk)
 Clarisse's Bow+ (+Def)
 Clarisse's Bow+ (+Res)
 Clarisse's Bow+ (+Spd)
+Cocobow
+Cocobow+
+Cocobow+ (+Atk)
+Cocobow+ (+Def)
+Cocobow+ (+Res)
+Cocobow+ (+Spd)
 Cupid Arrow
 Cupid Arrow+
 Cupid Arrow+ (+Atk)
@@ -290,6 +302,7 @@ Fresh Bouquet+ (+Atk)
 Fresh Bouquet+ (+Def)
 Fresh Bouquet+ (+Res)
 Fresh Bouquet+ (+Spd)
+Fruit of Iounn
 Fujin Yumi
 Fujin Yumi (+Atk)
 Fujin Yumi (+Def)
@@ -609,6 +622,12 @@ Seashell+ (+Atk)
 Seashell+ (+Def)
 Seashell+ (+Res)
 Seashell+ (+Spd)
+Shell Lance
+Shell Lance+
+Shell Lance+ (+Atk)
+Shell Lance+ (+Def)
+Shell Lance+ (+Res)
+Shell Lance+ (+Spd)
 Shine
 Shine+
 Shine+ (+Atk)
@@ -742,6 +761,7 @@ Thoron+ (+Def)
 Thoron+ (+Res)
 Thoron+ (+Spd)
 Thunder
+Thunder Armads
 Thunderhead
 Tomato Tome
 Tomato Tome+

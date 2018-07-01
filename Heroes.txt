@@ -33,6 +33,7 @@ Caeda
 Cain
 Camilla
 Camus
+Canas
 Catria
 Cecilia
 Celica
@@ -117,6 +118,7 @@ Lachesis
 Laslow
 Legault
 Legendary Ephraim
+Legendary Hector
 Legendary Ike
 Legendary Lyn
 Legendary Robin (F)
@@ -128,6 +130,7 @@ Leon
 Lilina
 Lilina (LA)
 Linde
+Linus
 Lissa
 Lloyd
 Lon'qu
@@ -228,12 +231,16 @@ Spring Xander
 Stahl
 Subaki
 Sully
+Summer Cordelia
 Summer Corrin (F)
 Summer Elise
 Summer Frederick
 Summer Gaius
+Summer Innes
 Summer Leo
+Summer Noire
 Summer Robin (F)
+Summer Tana
 Summer Tiki
 Summer Xander
 Tailtiu

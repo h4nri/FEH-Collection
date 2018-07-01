@@ -13,6 +13,9 @@ Atk/Spd 2
 Atk/Spd Bond 1
 Atk/Spd Bond 2
 Atk/Spd Bond 3
+Atk/Spd Push 1
+Atk/Spd Push 2
+Atk/Spd Push 3
 Attack +1
 Attack +2
 Attack +3

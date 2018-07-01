@@ -94,12 +94,16 @@ Hone Spd 3
 Infantry Pulse 1
 Infantry Pulse 2
 Infantry Pulse 3
+Infantry Rush 1
+Infantry Rush 2
+Infantry Rush 3
 Lance Valor 1
 Lance Valor 2
 Lance Valor 3
 Odd Atk Wave 1
 Odd Atk Wave 2
 Odd Atk Wave 3
+Ostia's Pulse
 Panic Ploy 1
 Panic Ploy 2
 Panic Ploy 3
@@ -149,7 +153,7 @@ Spur Spd 1
 Spur Spd 2
 Spur Spd 3
 Spur Spd/Def 1
-Spur SPd/Def 2
+Spur Spd/Def 2
 Sword Experience 1
 Sword Experience 2
 Sword Experience 3
